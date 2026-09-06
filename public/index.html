@@ -1,0 +1,98 @@
+git add .<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LeadFlow CRM</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand-mark">LF</div>
+      <div class="logo">Lead<span>Flow</span></div>
+      <p class="sidebar-copy">Client relationship workspace</p>
+      <nav>
+        <div class="nav active"><span>01</span> Dashboard</div>
+        <div class="nav"><span>02</span> Leads</div>
+      </nav>
+      <div class="sidebar-footer"><span class="online-dot"></span><div><strong>Workspace live</strong><small>Local data store</small></div></div>
+    </aside>
+
+    <main>
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Pipeline overview <span id="today"></span></p>
+          <h1>Good morning, admin.</h1>
+          <p>Keep every conversation moving toward the next step.</p>
+        </div>
+        <button id="openModal" class="primary-button"><span>+</span> Add lead</button>
+      </header>
+
+      <section class="stats">
+        <div class="card"><span>Total leads</span><strong id="totalCount">0</strong><small>Across all sources</small></div>
+        <div class="card card-new"><span>New</span><strong id="newCount">0</strong><small>Ready to contact</small></div>
+        <div class="card card-contacted"><span>Contacted</span><strong id="contactedCount">0</strong><small>In conversation</small></div>
+        <div class="card card-converted"><span>Converted</span><strong id="convertedCount">0</strong><small>Won this cycle</small></div>
+      </section>
+
+      <section class="table-card">
+        <div class="table-top">
+          <div><p class="eyebrow">Your pipeline</p><h2>All leads <span id="resultCount">0</span></h2></div>
+          <label class="search-field"><span>Search</span><input id="search" placeholder="Name or email" /></label>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Source</th>
+                <th>Status</th>
+                <th>Notes / Follow-up</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="leadTable"><tr><td colspan="6" class="empty">Loading leads...</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h2 id="modalTitle">Add New Lead</h2>
+        <button class="close" id="closeModal">×</button>
+      </div>
+      <form id="leadForm">
+        <input type="hidden" id="leadId" />
+        <label>Name</label>
+        <input id="name" required placeholder="Client name" />
+        <label>Email</label>
+        <input id="email" type="email" required placeholder="client@email.com" />
+        <label>Source</label>
+        <select id="source" aria-label="Lead source">
+          <option>Website</option>
+          <option>LinkedIn</option>
+          <option>Instagram</option>
+          <option>Referral</option>
+          <option>Other</option>
+        </select>
+        <label>Status</label>
+        <select id="status" aria-label="Lead status">
+          <option>New</option>
+          <option>Contacted</option>
+          <option>Converted</option>
+        </select>
+        <label>Notes / Follow-up</label>
+        <textarea id="notes" rows="4" placeholder="Add notes or follow-up details..."></textarea>
+        <button type="submit" class="save">Save Lead</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
