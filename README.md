@@ -4,7 +4,7 @@ A simple Client Lead Management System (Mini CRM).
 
 ## Links
 
-- GitHub repository: https://github.com/Tharakvarma/leadflow-crm
+- GitHub repository: https://github.com/Tharakvarma/Future_FS_02
 - Local demo: http://localhost:5000
 - Public demo: deploy this repository on Render using the included `render.yaml`
 
@@ -51,12 +51,12 @@ Open:
 
 ## GitHub
 This project is available at:
-https://github.com/Tharakvarma/leadflow-crm
+https://github.com/Tharakvarma/Future_FS_02
 
 ## Deploy on Render
 
 1. Open https://render.com/deploy
-2. Connect the `Tharakvarma/leadflow-crm` repository.
+2. Connect the `Tharakvarma/Future_FS_02` repository.
 3. Render will read `render.yaml` and create the web service.
 4. Copy the generated `onrender.com` URL into the **Public demo** link above.
 
